@@ -1,8 +1,7 @@
-
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Article } from "@/types/article";
 import { formatDistanceToNow } from "date-fns";
-import { FileText, Link as LinkIcon, Youtube } from "lucide-react";
+import { FileText, Link as LinkIcon, Youtube, File } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ArticleCardProps {
@@ -17,7 +16,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
       case "video":
         return <Youtube size={16} className="text-red-500" />;
       case "pdf":
-        return <FileText size={16} className="text-amber-500" />;
+        return <File size={16} className="text-amber-500" />;
       case "newsletter":
         return <LinkIcon size={16} className="text-purple-500" />;
       default:
@@ -41,6 +40,11 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
             {getContentTypeIcon()}
             <span>{article.source || "Web"}</span>
+            {article.contentType === 'pdf' && (
+              <span className="text-xs bg-amber-100 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 px-1.5 py-0.5 rounded-sm">
+                PDF
+              </span>
+            )}
           </div>
           <h3 className="font-medium text-lg line-clamp-2 mb-2">{article.title}</h3>
           {article.description && (

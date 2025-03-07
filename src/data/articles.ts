@@ -1,5 +1,5 @@
-
 import { Article } from "@/types/article";
+import { samplePDFs } from "./sample-pdfs";
 
 export const sampleArticles: Article[] = [
   {
@@ -218,5 +218,7 @@ export const sampleArticles: Article[] = [
     publishedAt: "2023-09-01T08:15:00Z",
     readingTime: 20,
     status: "inbox"
-  }
+  },
+  // Add sample PDFs to the articles list
+  ...samplePDFs
 ];

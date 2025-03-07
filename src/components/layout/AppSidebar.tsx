@@ -1,4 +1,3 @@
-
 import { 
   Inbox, 
   Clock, 
@@ -63,7 +62,7 @@ const AppSidebar = () => {
               {mainNavItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild 
-                    active={isActive(item.url)}
+                    data-active={isActive(item.url)}
                     className={isActive(item.url) ? "bg-bondwise-50 text-bondwise-800 dark:bg-bondwise-950/50 dark:text-bondwise-200" : ""}
                   >
                     <Link to={item.url} className="flex items-center gap-2">
