@@ -1,6 +1,52 @@
 import { Article } from "@/types/article";
 import { samplePDFs } from "./sample-pdfs";
 
+// Sample video articles
+const sampleVideoArticles: Article[] = [
+  {
+    id: "video-1",
+    title: "Understanding Machine Learning: A Beginner's Guide",
+    description: "This video explains the fundamental concepts of machine learning for beginners, covering supervised and unsupervised learning with practical examples.",
+    content: "", // Video content is handled by the video player
+    contentType: "video",
+    source: "TechEdu Channel",
+    originalUrl: "https://www.youtube.com/watch?v=f_uwKZIAeM0", // A real YouTube video about ML
+    coverImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    addedAt: "2023-10-18T09:30:00Z",
+    publishedAt: "2023-10-10T14:15:00Z",
+    readingTime: 15, // Video duration in minutes
+    status: "inbox"
+  },
+  {
+    id: "video-2",
+    title: "Advanced JavaScript Techniques for Modern Web Development",
+    description: "Learn advanced JavaScript patterns and techniques used in modern web development, including closures, promises, async/await, and functional programming concepts.",
+    content: "", // Video content is handled by the video player
+    contentType: "video",
+    source: "CodeMastery",
+    originalUrl: "https://www.youtube.com/watch?v=hdI2bqOjy3c", // A real JavaScript tutorial
+    coverImage: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80",
+    addedAt: "2023-10-16T11:45:00Z",
+    publishedAt: "2023-10-05T08:20:00Z",
+    readingTime: 20, // Video duration in minutes
+    status: "later"
+  },
+  {
+    id: "video-3",
+    title: "The Future of Artificial Intelligence: Ethical Considerations",
+    description: "This talk explores the future implications of artificial intelligence development and the ethical considerations that researchers, businesses, and society need to address.",
+    content: "", // Video content is handled by the video player
+    contentType: "video",
+    source: "TechConference 2023",
+    originalUrl: "https://www.youtube.com/watch?v=5p248yoa3oE", // A real AI ethics video
+    coverImage: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1406&q=80",
+    addedAt: "2023-10-12T15:20:00Z",
+    publishedAt: "2023-09-30T13:10:00Z",
+    readingTime: 35, // Video duration in minutes
+    status: "archive"
+  }
+];
+
 export const sampleArticles: Article[] = [
   {
     id: "1",
@@ -220,5 +266,7 @@ export const sampleArticles: Article[] = [
     status: "inbox"
   },
   // Add sample PDFs to the articles list
-  ...samplePDFs
+  ...samplePDFs,
+  // Add sample video articles
+  ...sampleVideoArticles
 ];
